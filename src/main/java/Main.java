@@ -8,15 +8,15 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args){
 
-        Entity a = new Entity();
+        Entity a = new Human();
         Entity b = new Human();
         Human  c = new Human();
         Human d = new Human(0.80);
         Warrior e = new Warrior(0.90);
         Warrior f = new Warrior();
-        Entity g = new Entity();
+        Entity g = new Warrior();
             g.setHealth(1.0);
-        Entity h = new Entity();
+        Entity h = new Human();
             h.setHealth(1.0);
 
         ArrayList<Entity> creatures = new ArrayList<Entity>();
@@ -24,7 +24,7 @@ public class Main {
         creatures.add(b);
         creatures.add(c);
         creatures.add(d);
-        creatures.add(new Entity());
+        creatures.add(new Warrior());
         creatures.add(new Human());
         creatures.add(new Human(0.95));
         creatures.add(new Human(100.0));

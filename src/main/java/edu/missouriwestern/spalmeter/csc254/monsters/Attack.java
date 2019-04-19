@@ -1,5 +1,7 @@
 package edu.missouriwestern.spalmeter.csc254.monsters;
 
+import java.time.LocalTime;
+
 public class Attack {
 
     /**
@@ -10,7 +12,7 @@ public class Attack {
      * A random number between 0.0 <= 0.0 < 1.0.  If this number is less than the attacker's aggressiveness, then
      * an attack occurs.
      *     If the attack occurs the strength of the attack is calculated using the strength and stamina of the attacker.
-     *     If no attack occurs the ccreature's attack message is returned.
+     *     If no attack occurs the creature's attack message is returned.
      *
      * @param attacker
      * @param defender
@@ -25,6 +27,18 @@ public class Attack {
             message = "One or both players are dead.  No attack";
         }else {
             boolean attack = Math.random() < attacker.getAggressiveness();
+            if (attacker instanceof Nocturnal) {
+                if(!isDark()) {
+                    attack = false;
+                }
+            }
+            if (defender instanceof Nocturnal && isDark()) {
+                double missChance = Math.random();
+                if(missChance > 0.5) {
+                    attack = false;
+                    System.out.println("defender hides");
+                }
+            }
             if (attack) {
                 double force = attacker.getStrength() * Math.random();
                 double damage = force * attacker.getStamina();
@@ -53,6 +67,13 @@ public class Attack {
         System.out.println("\nRound " + round);
         System.out.println(Attack.attack(player1, player2));
         System.out.println(Attack.attack(player2, player1));
+    }
+    public static boolean isDark() {
+        boolean dark = false;
+        LocalTime time = LocalTime.now();
+        int currentHour = time.getHour();
+        dark = (currentHour < 6 || currentHour > 18);
+        return dark;
     }
 
 }

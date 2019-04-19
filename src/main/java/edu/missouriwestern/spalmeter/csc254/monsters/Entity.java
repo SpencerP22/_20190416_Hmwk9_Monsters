@@ -30,7 +30,7 @@ package edu.missouriwestern.spalmeter.csc254.monsters;
  * .80 would be about 180 pound human.
  * 1. would be about a 250 pound human (maybe a warrior)
  */
-public class Entity implements Comparable<Entity> {
+public abstract class Entity implements Comparable<Entity> {
 
     String symbol = "❇️";// https://emojipedia.org  sparkle
     static private int nextID = 10001;
