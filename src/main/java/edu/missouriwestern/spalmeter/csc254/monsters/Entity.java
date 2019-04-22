@@ -36,12 +36,13 @@ public abstract class Entity implements Comparable<Entity> {
     static private int nextID = 10001;
     static double strength = 0.0; // 1. is normal human strength
     static double aggressiveness = 0.0;  //1.0 is human in combat situation.  Must not be > 1.0
-    protected static String attackMessage = "attacks generically";
-    protected static String passiveMessage = "stares into space";
+    protected String attackMessage = "attacks generically";
+    protected String passiveMessage = "stares into space";
     //individual characteristics
     private int id;
     private double health;
     private double stamina = 0.0;
+
 
     public Entity() {
         id = nextID;

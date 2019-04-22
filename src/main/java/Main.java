@@ -1,7 +1,4 @@
-import edu.missouriwestern.spalmeter.csc254.monsters.Attack;
-import edu.missouriwestern.spalmeter.csc254.monsters.Entity;
-import edu.missouriwestern.spalmeter.csc254.monsters.Human;
-import edu.missouriwestern.spalmeter.csc254.monsters.Warrior;
+import edu.missouriwestern.spalmeter.csc254.monsters.*;
 
 import java.util.ArrayList;
 
@@ -18,6 +15,8 @@ public class Main {
             g.setHealth(1.0);
         Entity h = new Human();
             h.setHealth(1.0);
+        Entity x = new Ninja(1.0);
+        Ninja y = new Ninja(0.9);
 
         ArrayList<Entity> creatures = new ArrayList<Entity>();
         creatures.add(a);
@@ -28,13 +27,10 @@ public class Main {
         creatures.add(new Human());
         creatures.add(new Human(0.95));
         creatures.add(new Human(100.0));
-        creatures.add(e);
-        creatures.add(f);
-        creatures.add(g);
-        creatures.add(h);
+        //creatures.add(new Ninja(1.0));
 
         print(creatures);
-
+        runMatch(e,f);
         //Run a match between two humans
         runMatch(b,c);
         //Run a match between two entities
@@ -45,6 +41,8 @@ public class Main {
         runMatch(b,f);
         //Run a match between an entity and a warrior
         runMatch(h,f);
+        //Run a match between a ninja and a warrior
+        runMatch(x,e);
 
 
         System.out.println("\uD83C\uDF84\uD83C\uDF84\uD83C\uDF84");
