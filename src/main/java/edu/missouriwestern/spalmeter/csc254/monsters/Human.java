@@ -4,7 +4,6 @@ public class Human extends Entity{
     public Human (){
         this(1.0);
     }
-
     public Human(double health){
         super();
         setSymbol();

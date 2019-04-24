@@ -5,19 +5,28 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args){
 
-        Entity a = new Human();
-        Entity b = new Human();
+        Human a = new Human();
+        Human b = new Human();
         Human  c = new Human();
         Human d = new Human(0.80);
+        Warrior treeHater = new Warrior();
         Warrior e = new Warrior(0.90);
         Warrior f = new Warrior();
-        Entity g = new Warrior();
-        Entity h = new Warrior();
-        Entity x = new Ninja(1.0);
+        Warrior g = new Warrior();
+        Warrior h = new Warrior();
+        Ninja x = new Ninja(1.0);
         Ninja y = new Ninja(0.9);
+
         Wolf wolf = new Wolf();
         Wolf secondWolf = new Wolf();
+        Wolf thirdWolf = new Wolf();
         Goose goose = new Goose();
+
+        Pansy pansy = new Pansy();
+        Pansy pansy2 = new Pansy();
+        Maple maple = new Maple();
+        Cactus cactus = new Cactus();
+
 
         ArrayList<Entity> creatures = new ArrayList<Entity>();
         creatures.add(a);
@@ -42,6 +51,12 @@ public class Main {
         runMatch(d, wolf);
         //Run a match between a wolf and a goose
         runMatch(secondWolf,goose);
+        //Run a match between a maple and a Warrior
+        runMatch(treeHater, maple);
+        //Run a match between a wolf and a cactus
+        runMatch(thirdWolf, cactus);
+        //Run a match between two pansies
+        runMatch(pansy,pansy2);
 
 
         System.out.println("\uD83C\uDF84\uD83C\uDF84\uD83C\uDF84");

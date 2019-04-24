@@ -13,8 +13,6 @@ public class Ninja extends Warrior implements Nocturnal {
         changeMessages();
     }
 
-
-
     @Override
     public void changeMessages() {
         if (Attack.isDark()) {
@@ -24,7 +22,7 @@ public class Ninja extends Warrior implements Nocturnal {
             else if (messageChance >= 0.25 && messageChance < 0.50)
                 attackMessage = "shoots a poisoned dart from his blowgun";
             else if (messageChance >= 0.50 && messageChance < 0.75)
-                attackMessage = "bashes with his nunhcucks";
+                attackMessage = "bashes with his nunchucks";
             else
                 attackMessage = "flings a throwing star";
         } else
