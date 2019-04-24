@@ -12,11 +12,12 @@ public class Main {
         Warrior e = new Warrior(0.90);
         Warrior f = new Warrior();
         Entity g = new Warrior();
-            g.setHealth(1.0);
-        Entity h = new Human();
-            h.setHealth(1.0);
+        Entity h = new Warrior();
         Entity x = new Ninja(1.0);
         Ninja y = new Ninja(0.9);
+        Wolf wolf = new Wolf();
+        Wolf secondWolf = new Wolf();
+        Goose goose = new Goose();
 
         ArrayList<Entity> creatures = new ArrayList<Entity>();
         creatures.add(a);
@@ -27,22 +28,20 @@ public class Main {
         creatures.add(new Human());
         creatures.add(new Human(0.95));
         creatures.add(new Human(100.0));
-        //creatures.add(new Ninja(1.0));
 
         print(creatures);
-        runMatch(e,f);
         //Run a match between two humans
-        runMatch(b,c);
-        //Run a match between two entities
-        runMatch(g,h);
+        runMatch(a,b);
         //Run a match between two warriors
         runMatch(e,f);
         //Run a match between a human and a warrior
-        runMatch(b,f);
-        //Run a match between an entity and a warrior
-        runMatch(h,f);
+        runMatch(c,g);
         //Run a match between a ninja and a warrior
-        runMatch(x,e);
+        runMatch(x,h);
+        //Run a match between a human and a wolf
+        runMatch(d, wolf);
+        //Run a match between a wolf and a goose
+        runMatch(secondWolf,goose);
 
 
         System.out.println("\uD83C\uDF84\uD83C\uDF84\uD83C\uDF84");

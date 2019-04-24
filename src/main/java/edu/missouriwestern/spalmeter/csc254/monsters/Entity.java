@@ -34,8 +34,8 @@ public abstract class Entity implements Comparable<Entity> {
 
     String symbol = "❇️";// https://emojipedia.org  sparkle
     static private int nextID = 10001;
-    static double strength = 0.0; // 1. is normal human strength
-    static double aggressiveness = 0.0;  //1.0 is human in combat situation.  Must not be > 1.0
+    double strength = 0.0; // 1. is normal human strength
+    double aggressiveness = 0.0;  //1.0 is human in combat situation.  Must not be > 1.0
     protected String attackMessage = "attacks generically";
     protected String passiveMessage = "stares into space";
     //individual characteristics

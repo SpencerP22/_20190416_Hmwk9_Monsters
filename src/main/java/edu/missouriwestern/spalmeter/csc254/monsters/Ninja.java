@@ -9,7 +9,7 @@ public class Ninja extends Warrior implements Nocturnal {
         setStamina(1.0+Math.random());
         strength = 1.40;
         aggressiveness = 1.0;
-        symbol = "\uD83D\uDC31\u200D\uD83D\uDC64";
+        symbol = "\uD83D\uDC40";
         changeMessages();
     }
 
